@@ -4,17 +4,19 @@ class AuthorsController < ApplicationController
   end
 
   def new
+    @author = Author.new
   end
 
   def create
-    @author = Author.create!(author_params)
+    @author = Author.new(
+      name: params[:name],
+      email: params[:email]
+    )
 
-    redirect_to author_path(@author)
-  end
-
-  private
-
-  def author_params
-    params.permit(:email, :name)
+    if @author.save
+      redirect_to author_path(@author)
+    else
+      render :new
+    end
   end
 end
