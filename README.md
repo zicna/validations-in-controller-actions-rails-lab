@@ -6,7 +6,7 @@ The goal of this lab is to allow users of this blog-style application to create 
 
 For example, if someone creates a blog post with less than 100 characters of content, it's likely that they accidentally pasted the wrong text, or misunderstood which information goes into which field. We can improve the user's experience and the stability of our codebase by notifying users about these kinds of mistakes *before* bad data gets into the database.
 
-# Objectives
+## Objectives
 
 - Define validations on a model
 - Use a conditional statement in an action to render different responses based on the validation state of a model
@@ -14,7 +14,7 @@ For example, if someone creates a blog post with less than 100 characters of con
 - Validate a create action
 - Validate an update action
 
-# Requirements
+## Requirements
 
 Make sure you run `rake db:seed` so you have some data to work with (defined in `db/seeds.rb`).
 
